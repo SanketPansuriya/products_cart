@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Products</h1><hr>
+
+<div id="products">
+  <% @products.each do |product| %>
+    <%= render product %>
+    <%= button_to "Add to cart this item", {:controller => "carts", :action => "create", :id => product.id} , method: :post, class: "btn btn-success" %>
+    <%= link_to "Show this product", product, class: "btn btn-info mt-2 mb-2" %>
+    <hr>
+  <% end %>
+</div>
+
+<%= link_to "New product", new_product_path,  class: "btn btn-primary mt-4"%>

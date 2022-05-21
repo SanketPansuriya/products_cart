@@ -1,0 +1,22 @@
+<div id="<%= dom_id cart %>">
+  <p>
+    <strong>Name:</strong>
+    <%= cart.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= cart.description %>
+  </p>
+
+  <p>
+    <strong>Quantity:</strong>
+    <%= session["product_ids"].count(cart.id.to_s) %>
+  </p>
+
+  <p>
+    <strong>Price:</strong>
+    <%= session["product_ids"].count(cart.id.to_s)*cart.price %>
+  </p>
+
+</div>

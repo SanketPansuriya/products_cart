@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render "cart", cart: @cart %>
+<div>
+  <%= button_to "Add to Cart", {:controller => "carts", :action => "create", :id => @cart.id} , method: :post, class: "btn btn-primary mt-2" %>
+</div>
+<div>
+  <%= link_to "Back to Carts", carts_path, class: "btn btn-warning mt-2" %>
+</div>
+<div>
+  <%= button_to "Delete One item", {:controller => "carts", :action => "destroy", :id => @cart.id}, method: :delete, class: "btn btn-danger mt-2" %>
+</div>

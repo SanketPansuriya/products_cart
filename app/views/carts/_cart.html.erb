@@ -20,7 +20,9 @@
   </p>
   <p>
     <strong>Product Image:</strong>
-    <%= image_tag cart.product_image.variant(:medium) if cart.product_image.attached? %>
   </p>
+  <p>
+    <%= image_tag cart.product_image.variant(:medium) if cart.product_image.attached? %>
+    </p>
 
 </div>
